@@ -1,3 +1,4 @@
-theme: minimal
+remote_theme: pages-themes/minimal@v0.2.0
 title: SoftwareGravy's Homepage
 description: Startups and Ruby on Rails
+show_downloads: false
