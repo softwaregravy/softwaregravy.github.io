@@ -4,3 +4,5 @@ plugins:
 title: SoftwareGravy's Homepage
 description: Startups and Ruby on Rails
 show_downloads: false
+
+theme: jekyll-theme-tactile
