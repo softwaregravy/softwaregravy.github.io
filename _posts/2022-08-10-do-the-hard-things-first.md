@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Focus on the hard things
 date: 2022-08-10 12:30:00 -0400
 ---
