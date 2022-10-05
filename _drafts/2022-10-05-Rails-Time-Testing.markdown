@@ -139,11 +139,11 @@ The `now` is a local variable set to your desired date or time for the test.
 So what's the real difference here? Not much. At the end of the day, both implementations stub the same few methods the same core time/date libraries. 
 There are a couple though:
 
-1. `Timecop` does not support unstubbing methods. It just falls back to the default implementation if nothing is specified. 
+1. Timecop does not support unstubbing methods. It just falls back to the default implementation if nothing is specified. 
 `Timecop#return` clears the stubbed times. 
 `TimeHelpers#travel_back` actually removes the stubbed methods and restores the original.
-2. `Timecop` stubs more methods. `Time#new`, `Date#strptime`, `Date#parse`, and `DateTime#parse` are overridden by `Timecop`, but not `TimeHelpers`. 
-This lets `Timecop` sub in stubbed times in these additional methods that might have missing pieces. 
+2. Timecop stubs more methods. `Time#new`, `Date#strptime`, `Date#parse`, and `DateTime#parse` are overridden by Timecop, but not TimeHelpers. 
+This lets Timecop sub in stubbed times in these additional methods that might have missing pieces. 
   - As an example:
 ```ruby 
 3.1.2 :020 > Date.parse("Jan-10")
@@ -151,8 +151,8 @@ This lets `Timecop` sub in stubbed times in these additional methods that might 
 3.1.2 :021 > Timecop.travel(Date.parse("2020-10-05")) {Date.parse("Jan-10")}
  => Fri, 10 Jan 2020 # Note the year is remembered from the #travel call
 ```
-3. `Timecop` supports nested travels. 
-The same will not work with `TimeHelpers`, but at least they catch it and raise a runtime error rather than returning the wrong times. 
+3. Timecop supports nested travels. 
+The same will not work with TimeHelpers, but at least they catch it and raise a runtime error rather than returning the wrong times. 
   - Example:
 ```ruby
 3.1.2 :025 > Timecop.travel(Date.parse("Jan-10")) { Timecop.travel(Date.parse("Feb-20")) { puts "I'm nested! #{Date.today}" }; puts "I'm the outer block! #{Date.today}" }
@@ -162,15 +162,15 @@ I'm the outer block! 2022-01-09
 ...gems/activesupport-7.0.4/lib/active_support/testing/time_helpers.rb:154:in `travel_to':  (RuntimeError)
 Calling `travel_to` with a block, when we have previously already made a call to `travel_to`, can lead to confusing time stubbing.
 ```
-4. `Timecop` has some extra options:
-  - Using `Timecop.travel` doesn't automatically freeze the clock -- you have to use `Timecop.freeze` for that. `TimeHelpers` always freezes time.
+4. Timecop has some extra options:
+  - Using `Timecop#travel` doesn't automatically freeze the clock -- you have to use `Timecop.freeze` for that. `TimeHelpers` always freezes time.
   - `Timecop` supports scaling time. Calling `Timecop.scale` can set the value of a second. 
 
 ## Overall
 
-`TimeHelpers` is good. It's not _quite_ as good or as flexible as `Timecop`, but it has the advantage of being built into Rails. I am biased towards minimizing dependencies, even in my test envs.
+TimeHelpers is good. It's not _quite_ as good or as flexible as Timecop, but it has the advantage of being built into Rails. I am biased towards minimizing dependencies, even in my test envs.
 
-Use `TimeHelpers`. You probably don't need `Timecop`.
+Use TimeHelpers. You probably don't need Timecop.
 
 
 
