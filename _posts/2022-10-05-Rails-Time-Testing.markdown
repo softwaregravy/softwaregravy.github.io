@@ -170,7 +170,9 @@ Calling `travel_to` with a block, when we have previously already made a call to
 
 TimeHelpers is good. It's not _quite_ as good or as flexible as Timecop, but it has the advantage of being built into Rails. I am biased towards minimizing dependencies, even in my test envs.
 
-Use TimeHelpers. You probably don't need Timecop.
+Use TimeHelpers. You probably don't need Timecop. 
+Unless you use [Capybara](https://github.com/teamcapybara/capybara) or tests that will run in separate processes, then you want Timecop. 
+That will have to wait for the next post. 
 
 
 
