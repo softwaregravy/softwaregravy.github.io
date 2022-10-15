@@ -4,20 +4,20 @@ title: A Unique ID for ESP32
 date: 2022-10-15 12:00:00 -0400
 ---
 
-I've recently been looking for a unique id for my ESP32 development. 
+I've recently been looking for a unique id for my ESP32 development.
 [I'm](https://stackoverflow.com/questions/73442663/esp32-arduino-ide-how-to-get-unique-id)
 [not](https://stackoverflow.com/questions/70974797/how-to-get-arduino-esp32-device-details-in-code)
 [alone](https://www.reddit.com/r/esp8266/comments/8xs1fq/creating_random_unique_ids_for_devices_using/).
 
-The solution is to use the [MAC address](https://en.wikipedia.org/wiki/MAC_address). 
-I'm not going to go into details on why, but espressif is guaranteeing their chips have unique MAC addresses. 
-Sources: [1](https://docs.espressif.com/projects/esp-idf/en/release-v3.0/api-reference/system/base_mac_address.html), 
-[2](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/misc_system_api.html), 
+The solution is to use the [MAC address](https://en.wikipedia.org/wiki/MAC_address).
+I'm not going to go into details on why, but espressif is guaranteeing their chips have unique MAC addresses.
+Sources: [1](https://docs.espressif.com/projects/esp-idf/en/release-v3.0/api-reference/system/base_mac_address.html),
+[2](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/misc_system_api.html),
 [3](https://www.esp32.com/viewtopic.php?t=17907).
 
-But what actually comes out of the API's and how do you rely on this?
+But what actually comes out of the APIs and how do you rely on this?
 
-Here are the outputs of a quick test program which I am using for reference. 
+Here are the outputs of a quick test program which I am using for reference.
 
 ```
 Getting Mac Address. esp_efuse with uint64: 158581228646888
@@ -33,7 +33,7 @@ Getting Mac Address. WiFi Library: E8:31:CD:91:3A:90
 
 And here is the program for reference:
 
-```C
+```cpp
   Serial.print("Getting Mac Address. esp_efuse with uint64: ");
   uint64_t raw_esp_efuse_int64 = 0LL;
   esp_efuse_mac_get_default((uint8_t*)(&raw_esp_efuse_int64));
@@ -74,8 +74,8 @@ And here is the program for reference:
 
 # Conclusion
 
-I plan to use `WiFi.macAddress()` if I am using Arduino, or I would use the `esp_efuse_mac_get_default` with an array of 6. 
-This will be unique enough for my purposes, built only on espressif. 
+I plan to use `WiFi.macAddress()` if I am using Arduino, or I would use the `esp_efuse_mac_get_default` with an array of 6.
+This will be unique enough for my purposes, built only on espressif.
 
 If I were building a much larger system and much more paranoid, I might prefix (or postfix) with something like my device version.
 (Where a device version is just a number I assign while compiling my firmware that would only increment with runs of the hardware. Maybe stored in NVM.)
