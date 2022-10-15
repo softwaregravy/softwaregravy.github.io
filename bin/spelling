@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/Users/johnhinnegan/Library/Python/3.9/bin/pyspelling3.9 -c .spellcheck.yml
