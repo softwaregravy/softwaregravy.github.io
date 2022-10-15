@@ -1,0 +1,12 @@
+matrix:
+- name: Markdown
+  aspell:
+    lang: en
+  dictionary:
+    wordlists:
+    - .wordlist.txt
+    encoding: utf-8
+  sources:
+  - '**/*.markdown'
+  - '**/*.md'
+  default_encoding: utf-8
