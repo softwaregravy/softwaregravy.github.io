@@ -156,14 +156,14 @@ The `now` is a local variable set to your desired date or time for the test.
 So what's the real difference here? Not much. At the end of the day, both implementations stub the same few methods the same core time/date libraries.
 There are a couple though:
 
-1) Timecop does not support unstubbing methods. It just falls back to the default implementation if nothing is specified.
+1. Timecop does not support unstubbing methods. It just falls back to the default implementation if nothing is specified.
 `Timecop#return` clears the stubbed times.
 `TimeHelpers#travel_back` actually removes the stubbed methods and restores the original.
 
-2) Timecop stubs more methods. `Time#new`, `Date#strptime`, `Date#parse`, and `DateTime#parse` are overridden by Timecop, but not TimeHelpers.
+2. Timecop stubs more methods. `Time#new`, `Date#strptime`, `Date#parse`, and `DateTime#parse` are overridden by Timecop, but not TimeHelpers.
 This lets Timecop sub in stubbed times in these additional methods that might have missing pieces.
 
-- As an example:
+    - As an example:
 
 ```ruby
 3.1.2 :020 > Date.parse("Jan-10")
@@ -172,10 +172,10 @@ This lets Timecop sub in stubbed times in these additional methods that might ha
  => Fri, 10 Jan 2020 # Note the year is remembered from the #travel call
 ```
 
-3) Timecop supports nested travels.
+3. Timecop supports nested travels.
 The same will not work with TimeHelpers, but at least they catch it and raise a runtime error rather than returning the wrong times.
 
-- Example:
+    - Example:
 
 ```ruby
 3.1.2 :025 > Timecop.travel(Date.parse("Jan-10")) { Timecop.travel(Date.parse("Feb-20")) { puts "I'm nested! #{Date.today}" }; puts "I'm the outer block! #{Date.today}" }
@@ -186,10 +186,10 @@ I'm the outer block! 2022-01-09
 Calling `travel_to` with a block, when we have previously already made a call to `travel_to`, can lead to confusing time stubbing.
 ```
 
-4) Timecop has some extra options:
+4. Timecop has some extra options:
 
-- Using `Timecop#travel` doesn't automatically freeze the clock -- you have to use `Timecop.freeze` for that. `TimeHelpers` always freezes time.
-- `Timecop` supports scaling time. Calling `Timecop.scale` can set the value of a second.
+    - Using `Timecop#travel` doesn't automatically freeze the clock -- you have to use `Timecop.freeze` for that. `TimeHelpers` always freezes time.
+    - `Timecop` supports scaling time. Calling `Timecop.scale` can set the value of a second.
 
 ## Overall
 
