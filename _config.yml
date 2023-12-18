@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: SoftwareGravy's Homepage
-description: Startups and Ruby on Rails
+title: Thoughts by John Hinnegan
+description: Startups and Managing Software Engineering
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: softwaregravy
 github_username: softwaregravy
