@@ -18,8 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Thoughts by John Hinnegan
-description: Startups and Managing Software Engineering
+title: Startups and Software Engineering
+description: >
+  I'm John. I write about writing software, managing software teams and projects, 
+  and other things relating to software engineering. 
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: softwaregravy
 github_username: softwaregravy
