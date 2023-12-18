@@ -1,0 +1,50 @@
+# My 2 Rules for Managing Software Engineering Teams
+
+In the dynamic world of software engineering, managing a team efficiently can be a challenging yet rewarding experience. 
+I've had the privilege of managing highly effective teams at tech giants like Google and Amazon, as well as at my own startup, Thinknear.
+In this blog post, I'll share two fundamental rules I've always followed for team management, which I believe are the keystones to any successful tech team.
+
+## Rule #1: Establish a Clear Process
+
+The first and foremost rule is having a process. 
+But why is this so crucial? In any team, especially in tech, clarity and structure are vital. 
+A well-defined process ensures that everyone knows what is expected of them and how to go about their tasks. 
+This reduces confusion, increases efficiency, and ensures quality in the work delivered.
+
+### Writing It Down
+
+An unwritten process is the same as not having a process.
+Documentation is key. It's important that the process is not just communicated verbally but written down. 
+This serves as a reference point for everyone in the team and helps new members get up to speed quickly.
+
+### Understanding the Process
+
+It's not enough to just write down the process; every team member must understand it. 
+New employees must be introduced to it, and it should be reviewed regularly at team meetings. 
+When team members understand the 'why' and 'how' of the process, they are more likely to follow it and work efficiently.
+
+
+## Rule #2: A Process to Change the Process
+
+The only constant in technology is change. 
+The second rule emphasizes the importance of adaptability. 
+A process should never be set in stone. 
+It needs to evolve with the team, the technology, and the market.
+
+### Regular Opportunities for Revision
+
+How often does your team get a chance to review and revise the process? 
+It should be a regular activity. 
+Whether it’s a monthly or quarterly review, setting aside time for the team to discuss the current process and propose changes is crucial. 
+This not only keeps the process relevant but also fosters a culture of continuous improvement.
+
+### Inclusivity in the Process
+
+When revising the process, it’s important that every team member has a voice. 
+Encouraging suggestions and feedback makes team members feel valued and ensures that the process is shaped by diverse perspectives. 
+This inclusivity often leads to more innovative and effective methodologies.
+
+## Conclusion
+
+Managing a team, especially in the ever-changing landscape of software engineering, is no small feat. 
+Having a solid process that everyone understands and abides by can help add structure and certainty. 
