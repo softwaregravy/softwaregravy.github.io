@@ -1,3 +1,9 @@
+---
+layout: post
+title: 2 Rules
+date: 2023-12-18
+---
+
 # My 2 Rules for Managing Software Engineering Teams
 
 In the dynamic world of software engineering, managing a team efficiently can be a challenging yet rewarding experience. 
