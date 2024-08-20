@@ -1,3 +1,9 @@
+---
+layout: post
+title: My Goal Setting Framework
+date: 2024-01-12
+---
+
 # My Goal Setting Framework
 
 As the new year unfolds, it's a time of fresh starts and setting intentions. Personal goal setting is a powerful tool that guides our focus, fuels our motivation, and shapes our future. It’s not just about dreaming big; it’s about making a tangible plan to turn those dreams into reality. Let’s explore a practical and balanced approach to setting and pursuing goals.
