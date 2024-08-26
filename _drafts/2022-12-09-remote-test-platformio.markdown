@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Setting up Remote Testing for Platformio
+title: Setting up Remote Testing for PlatformIO
 date: 2022-12-09 12:00:00 -400
 ---
 
 # Goal
 
-Lets set up a mac-mini to run as a remote test server for our platformio project. 
+Lets set up a mac-mini to run as a remote test server for our PlatformIO project. 
 
 I love to have continuous testing. Working with embedded systems, though, it's not as simple as hooking up your favorite cloud CI/CD provider. 
 In most cases, you'll need an actual device hooked up to your build server to actually run your tests on.
@@ -28,7 +28,7 @@ This handles communication between computers, sync'ing of code, and running of r
 
 ### 1. PlatformIO and Account 
 * You need to have [PlatformIO CLI](https://docs.platformio.org/en/stable/core/index.html) installed on both machines. 
-* You need an account for PlatformIO to broker communications. I signed up via [commandline](https://docs.platformio.org/en/stable/core/userguide/account/index.html).
+* You need an account for PlatformIO to broker communications. I signed up via [command line](https://docs.platformio.org/en/stable/core/userguide/account/index.html).
 * [Generate](https://docs.platformio.org/en/stable/core/userguide/account/cmd_token.html) a Personal Authentication Token and use below. 
 * Have your code building and running on both your local machine, and the server. 
 
@@ -38,7 +38,7 @@ to switch between client and server to diagnose issues.)
 
 ### 2. Launch Script
 On the server, create a script which will run the remote agent. We're going to run our server as a [LaunchDaemon](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html),
-so we need to make sure the `platformio` is available. By default, launchdaemon's have a pretty limited path, just `/usr/bin:/bin:/usr/sbin:/sbin`. 
+so we need to make sure the `platformio` is available. By default, Launchdaemon's have a pretty limited path, just `/usr/bin:/bin:/usr/sbin:/sbin`. 
 I installed PlatformIO via homebrew, so my executable is located in `/opt/homebrew/bin` which I had to make sure was on the executable path and 
 I also provided my auth token from above. 
 
