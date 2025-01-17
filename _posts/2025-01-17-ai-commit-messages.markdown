@@ -4,20 +4,21 @@ title: "Using AI to Draft Git Commit Messages"
 date: 2025-01-17 14:50:00 -0400
 ---
 
-Writing good commit messages is crucial for maintainable code, but it's often overlooked in the rush to push changes. 
-Recently, I automated a process using GPT to draft my commit messages. 
+Writing good commit messages is crucial for maintainable code, but it's often overlooked in the rush to push changes.
+Recently, I automated a process using GPT to draft my commit messages.
 
 ## The Problem
 
 We all know we should write meaningful commit messages, but in practice:
+
 - It's easy to default to vague messages like "fix bug" or "update code"
-- Writing good messages takes mental energy 
+- Writing good messages takes mental energy
 - The bigger the commit, the harder it is to remember all the changes
 - Early in a project, you might be the only developer and feel the cost-benefit is not there
 
 ## The Solution: AI-Assisted Commit Messages
 
-I adapted [Dustin Davis's approach](https://dustindavis.me/blog/use-ai-to-write-your-git-commit-messages/) to create a Git hook that automatically suggests commit messages based on staged changes. 
+I adapted [Dustin Davis's approach](https://dustindavis.me/blog/use-ai-to-write-your-git-commit-messages/) to create a Git hook that automatically suggests commit messages based on staged changes.
 
 Now when I type `git commit` it opens up my editor and has a good draft of a commit message ready to go.
 
@@ -109,6 +110,6 @@ Now every repository automatically gets AI-assisted commit messages, just use `g
 
 ## Conclusion
 
-Using AI to draft commit messages is a small automation that makes a meaningful difference in code quality. 
-It's not about replacing human judgment but about making it easier to maintain good practices. 
+Using AI to draft commit messages is a small automation that makes a meaningful difference in code quality.
+It's not about replacing human judgment but about making it easier to maintain good practices.
 The best tools are often the ones that reduce friction in doing the right thing - and this is definitely one of those tools.

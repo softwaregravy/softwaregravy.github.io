@@ -44,9 +44,9 @@ In both cases we are testing that on May 8, 2022 at 1:00am UTC, that our farm wi
 
 ### Comparing Time
 
-One gotcha when writing tests involving time in Ruby is that you can be unequal due to precision. 
-The example below shows that Time has plenty of precision. 
-For our purposes, this is a 63-bit signed integer and is the nanoseconds since November 12th, 1823 (anyone know why was chosen? I don't). 
+One gotcha when writing tests involving time in Ruby is that you can be unequal due to precision.
+The example below shows that Time has plenty of precision.
+For our purposes, this is a 63-bit signed integer and is the nanoseconds since November 12th, 1823 (anyone know why was chosen? I don't).
 Even 2 calls on the same line of code will result in different times being captured.
 
 ```ruby
