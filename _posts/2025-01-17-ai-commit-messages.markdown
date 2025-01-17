@@ -57,7 +57,7 @@ response=$(curl -s -X POST https://api.openai.com/v1/chat/completions \
   -d "$(jq -n \
         --argjson messages "$messages" \
         '{
-          model: "gpt-4",
+          model: "gpt-4o-mini",
           messages: $messages,
           temperature: 0.5,
           max_tokens: 5000
