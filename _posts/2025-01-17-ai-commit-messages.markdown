@@ -113,3 +113,5 @@ Now every repository automatically gets AI-assisted commit messages, just use `g
 Using AI to draft commit messages is a small automation that makes a meaningful difference in code quality.
 It's not about replacing human judgment but about making it easier to maintain good practices.
 The best tools are often the ones that reduce friction in doing the right thing - and this is definitely one of those tools.
+
+PS I am still tweaking the script occaisionally. You can find the latest [here](https://github.com/softwaregravy/system_files/blob/master/git_hooks/prepare-commit-msg).
