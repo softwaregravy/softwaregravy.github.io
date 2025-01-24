@@ -38,6 +38,12 @@ plugins:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
+include:
+  - pages
+
+header_pages: 
+  - pages.markdown
+  - about.markdown
 #
 # exclude:
 #   - .sass-cache/

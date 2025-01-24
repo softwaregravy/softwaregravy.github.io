@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="pages-list">
+  <h1>Static Pages</h1>
+  <ul>
+    {% for page in site.pages %}
+      {% if page.path contains 'pages/' %}
+        <li>
+          <a href="{{ page.url }}">{{ page.title }}</a>
+          {% if page.last_modified_at %}
+            <span class="page-date">(Last updated: {{ page.last_modified_at | date: "%Y-%m-%d" }})</span>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
