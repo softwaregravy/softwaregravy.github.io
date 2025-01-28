@@ -4,6 +4,14 @@ title: Useful Commands
 last_modified_at: 2024-01-24
 ---
 
+# OS X
+
+## Stop Spotlight from indexing certain directories
+
+```bash
+sudo mdutil -i off /path/to/directory
+```
+
 # Find
 
 ## Match file name and execute command
