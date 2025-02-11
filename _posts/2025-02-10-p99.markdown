@@ -1,0 +1,16 @@
+---
+layout: post
+title: "A Simple Hack for Monitoring P99 Latency at Scale"
+date: 2025-02-10 09:00:00 -0800
+categories: distributed-systems monitoring
+---
+
+Ever needed to monitor P99 latency across hundreds of servers without breaking the bank? Here's a simple yet effective technique we used at Thinknear to monitor our high-scale distributed system's performance.
+
+## The Challenge
+
+We were processing hundreds of thousands of requests per second across hundreds of auto-scaling servers. Traditional P99 (99th percentile) latency monitoring solutions were either technically inadequate for our scale or prohibitively expensive.
+
+## The Solution
+
+Instead of trying to calculate exact P99 values, we flipped the problem on its head. We simply counted requests that exceeded our P99 latency target. The logic is straightforward: if less than 1% of total requests exceed your P99 target, you're meeting your SLA.
